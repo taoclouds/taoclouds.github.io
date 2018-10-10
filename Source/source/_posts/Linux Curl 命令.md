@@ -16,7 +16,7 @@ tags:
 curl www.google.com
 ```
 得到返回结果如下：
-![curl 访问 Google]()
+![curl 访问 Google](https://github.com/taoclouds/taoclouds.github.io/blob/Source/Source/images/curl_google.jpg)
 
 可以看到，返回结果直接就是网站的源码。。。可以使用`-o`命令将此网页保存下来。
 ```
@@ -28,6 +28,7 @@ curl -o Google.html www.google.com
 ```
 curl -i -L www.google.com
 ```
+![返回内容](https://github.com/taoclouds/taoclouds.github.io/blob/Source/Source/images/response.jpg)
 这样便可以查看服务器的返回内容，包括状态码等一些信息。不过需要注意的是，`-i`参数只显示返回头的信息。具体返回体的信息是看不到的。
 
 如果我们需要查看一次`HTTP`通信的过程是怎样的，那么使用`-v`命令即可，它可以显示一次`http`通信的过程，包括端口链接和`request`的头信息。当然，`curl`还支持`--trace`命令，使用它即可查看整个通信的过程，也可以将其写入到指定的文件中：`--trace output.txt`。
